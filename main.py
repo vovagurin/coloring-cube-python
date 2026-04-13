@@ -1,9 +1,12 @@
 import pygame
 import random
+import helper
+
 pygame.init()
 
 screen = pygame.display.set_mode((1600, 900))
-pygame.display.set_caption("geym")
+pygame.display.set_caption("coloring cube")
+pygame.display.set_icon(pygame.image.load(helper.resource_path('Pr/игровая ячейка.png')).convert_alpha())
 
 def gem():
     global P, E, E0, K, lK, I, U, B, k, Q, V, C, H, krp, victory
@@ -87,45 +90,45 @@ def gem():
 
     P[E0[0]][E0[1]] = 2
 
-    victory = pygame.image.load('Pr/victory.png').convert_alpha()
+    victory = pygame.image.load(helper.resource_path('Pr/victory.png')).convert_alpha()
 
-    I = pygame.image.load('Pr/игровая ячейка.png').convert_alpha()
-    B = pygame.image.load('Pr/блокнутая ячейка.png').convert_alpha()
-    U = pygame.image.load('Pr/простая ечейка.png').convert_alpha()
+    I = pygame.image.load(helper.resource_path('Pr/игровая ячейка.png')).convert_alpha()
+    B = pygame.image.load(helper.resource_path('Pr/блокнутая ячейка.png')).convert_alpha()
+    U = pygame.image.load(helper.resource_path('Pr/простая ечейка.png')).convert_alpha()
 
     k = random.randint(1, 11)
     #k = 11
     if k == 1:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет синий.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет синий.png')).convert_alpha()
     elif k == 2:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет красный.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет красный.png')).convert_alpha()
     elif k == 3:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет голубой.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет голубой.png')).convert_alpha()
     elif k == 4:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет жёлтый.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет жёлтый.png')).convert_alpha()
     elif k == 5:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет зелёный.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет зелёный.png')).convert_alpha()
     elif k == 6:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет малиновый.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет малиновый.png')).convert_alpha()
     elif k == 7:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет ораньжевый.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет ораньжевый.png')).convert_alpha()
     elif k == 8:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет розовый.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет розовый.png')).convert_alpha()
     elif k == 9:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет салатовый.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет салатовый.png')).convert_alpha()
     elif k == 10:
-        K = pygame.image.load('Pr/крашеная ечейка, цвет фиолетовый.png').convert_alpha()
+        K = pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет фиолетовый.png')).convert_alpha()
     elif k == 11:
-        K = [pygame.image.load('Pr/крашеная ечейка, цвет красный.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет синий.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет голубой.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет жёлтый.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет зелёный.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет малиновый.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет ораньжевый.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет розовый.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет салатовый.png').convert_alpha(),
-            pygame.image.load('Pr/крашеная ечейка, цвет фиолетовый.png').convert_alpha()
+        K = [pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет красный.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет синий.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет голубой.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет жёлтый.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет зелёный.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет малиновый.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет ораньжевый.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет розовый.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет салатовый.png')).convert_alpha(),
+            pygame.image.load(helper.resource_path('Pr/крашеная ечейка, цвет фиолетовый.png')).convert_alpha()
             ]
         lK = []
         for i in range(18):
@@ -133,9 +136,9 @@ def gem():
             for j in range(32):
                 lK[i].append(random.randint(1, 10)-1)
 
-    V = pygame.mixer.Sound('Pr/V.mp3')
-    H = pygame.mixer.Sound('Pr/H.mp3')
-    C = pygame.mixer.Sound('Pr/C.mp3')
+    V = pygame.mixer.Sound(helper.resource_path('Pr/V.mp3'))
+    H = pygame.mixer.Sound(helper.resource_path('Pr/H.mp3'))
+    C = pygame.mixer.Sound(helper.resource_path('Pr/C.mp3'))
 
 
 
